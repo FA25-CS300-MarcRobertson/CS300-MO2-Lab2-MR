@@ -15,5 +15,49 @@ async function fetchUserPosts(userId = 1) {
     console.log(`Posts by user ${userId}:`, posts.slice(0, 3));
 }
 
-fetchUsers();
-fetchUserPosts(1);
+// Fetching Data from REST Countries API
+
+async function fetchAgeData(userId = 1) {
+    const response = await fetch(`https://api.agify.io/?name=meelad`);
+    const agify = await response.json();
+    console.log(`Agify data:`, agify);
+
+}
+
+
+
+// Fetching Data from Cat Facts API
+
+async function fetchCatFacts(userId = 1) {
+    const response = await fetch(`https://catfact.ninja/fact`);
+    const facts = await response.json();
+    console.log(`Cat facts:`, facts);
+}
+
+
+// Fetching Data from PokeAPI
+
+async function fetchPokeAPI(userId = 1) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/ditto`);
+    const pokemon = await response.json();
+    console.log(`Pokemon ${userId}:`, pokemon);
+}
+
+
+// Fetching Data from Advice Slip API
+
+async function fetchAdviceSlip(userId = 1) {
+    const response = await fetch(`https://api.adviceslip.com/advice`);
+    const advice = await response.json();
+    console.log(`Advice for user ${userId}:`, advice);
+}
+
+// Fetching Data from Quotable API
+async function fetchDogBreed(userId = 1) {
+    const response = await fetch(`https://dog.ceo/api/breeds/image/random`);
+    const dogData = await response.json();
+    console.log(`Random dog image for user ${userId}:`, dogData);
+}
+
+
+   
