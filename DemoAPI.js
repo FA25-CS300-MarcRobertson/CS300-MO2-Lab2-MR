@@ -59,5 +59,12 @@ async function fetchDogBreed(userId = 1) {
     console.log(`Random dog image for user ${userId}:`, dogData);
 }
 
+// Run the API calls
 
+fetchUsers();
+fetchAgeData();
+fetchCatFacts();
+fetchPokeAPI();
+fetchAdviceSlip();
+fetchDogBreed(); 
    
